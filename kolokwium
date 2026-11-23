@@ -1,4 +1,11 @@
 
+Clone: pobieramy własny fork, nie oryginał
+cd ~
+git clone git@github.com:TWOJ_LOGIN/PI-Kolokwium-Probne-2026.git
+cd PI-Kolokwium-Probne-2026
+git remote -v
+git status
+
 a
 
 mkdir -p raporty
@@ -34,6 +41,7 @@ git add .
 git status
 git commit -m "wykonane punkty a i b"
 git push
+seve dok
 git add .
 git commit -m "wykonanene zawdania c i d"
 git push
