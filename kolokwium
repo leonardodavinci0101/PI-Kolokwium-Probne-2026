@@ -1,0 +1,43 @@
+
+a
+
+mkdir -p raporty
+grep -h '^ERROR'
+grep -h '^ERROR' dane/*.log | sort > raporty/bledy.txt
+nano raporty/bledy.txt
+wc -l
+wc -l < raporty/bledy.txt
+wc -l < raporty/bledy.txt | awk "{print $1}" > raporty/ile_bledow.txt
+nano raporty/ile_bledow.txt
+
+b
+
+chmod 750 src/analiza.sh
+tar -czf raporty/oddanie.tar.gz dane/ src/ README.md
+ls -l raporty
+
+c
+
+nano src/analiza.sh
+bash -n src/analiza.sh
+bash src/analiza.sh
+bash src/analiza.sh raporty/
+
+d
+
+git clone git@github.com:leonardodavinci0101/PI-Kolokwium-Probne-2026.git
+cd PI-Kolokwium-Probne-2026
+git remote -v
+git status
+git diff
+git add .
+git status
+git commit -m "wykonane punkty a i b"
+git push
+git add .
+git commit -m "wykonanene zawdania c i d"
+git push
+
+
+
+
